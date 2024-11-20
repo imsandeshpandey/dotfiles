@@ -25,7 +25,7 @@
   {
     "key": "ctrl-n",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "neovim.mode == 'normal'"
+    "when": "!editorTextFocus"
   },
   {
     "key": "ctrl-n",
