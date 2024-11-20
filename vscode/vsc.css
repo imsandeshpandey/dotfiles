@@ -1,0 +1,276 @@
+/* ROOT VARIABLES ///////////////////////////////////////////////*/
+:root {
+  --shadow-rim: inset 0 1px 0 #ffffff09 !important;
+  --blur: blur(10px) !important;
+  --radius: 6px !important;
+  --radius-lg: 8px !important;
+  --radius-sm: 4px !important;
+  --border: 1px solid #ffffff09 !important;
+}
+
+/* CORE UI ELEMENTS ////////////////////////////////////////////*/
+.margin {
+  background-color: var(--vscode-editor-background) !important;
+}
+
+.context-view {
+  background-color: var(--vscode-editorWidget-background);
+}
+
+.monaco-scrollable-element {
+  background-color: transparent !important;
+}
+
+.pane-body {
+  padding: 8px;
+}
+
+.pane-header {
+  padding: 0 8px;
+}
+
+/* LISTS & ROWS ///////////////////////////////////////////////*/
+.monaco-list-row {
+  border-radius: var(--radius);
+}
+
+.monaco-list-row.selected,
+.monaco-list-row.focused {
+  box-shadow: var(--shadow-rim) !important;
+  outline: 1px solid #00000020 !important;
+  border-radius: var(--radius);
+}
+
+/* QUICK INPUT & WIDGETS //////////////////////////////////////*/
+.quick-input-widget {
+  top: 50% !important;
+  transform-origin: top;
+  transform: translateY(-50%);
+  backdrop-filter: var(--blur);
+  border: 1px solid #ffffff12;
+}
+
+.suggest-input-container {
+  height: 24px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: var(--radius);
+}
+
+.quick-input-widget .monaco-inputbox {
+  height: 32px !important;
+  border-radius: var(--radius-lg);
+  margin-bottom: 4px;
+}
+
+.quick-input-widget .monaco-inputbox {
+  height: 32px !important;
+  border-radius: var(--radius-lg);
+  margin-bottom: 4px;
+}
+
+.quick-input-list-entry {
+  align-items: center;
+}
+
+.quick-input-widget .monaco-list-rows {
+  background: transparent !important;
+}
+
+/* TAB STYLING ///////////////////////////////////////////////*/
+.tab {
+  outline: 1px solid transparent !important;
+  transition: all 0.2s ease-in-out;
+  scale: 0.95;
+  border-radius: var(--radius-lg);
+}
+
+.tab.active {
+  outline: 1px solid #00000020 !important;
+  scale: 1;
+  box-shadow: var(--shadow-rim);
+}
+
+.tab.active .tab-border-bottom-container {
+  height: 2px !important;
+}
+
+/* SIDEBAR STYLING ///////////////////////////////////////////*/
+.sidebar ul[role="tablist"] {
+  margin-bottom: var(--radius-lg);
+  margin-left: 16px !important;
+  justify-content: space-between;
+}
+
+.sidebar ul[role="tablist"] .action-item {
+  width: 40px;
+  padding: 0px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.sidebar ul[role="tablist"] .action-item.checked {
+  background-color: #ffffff12 !important;
+  box-shadow: var(--shadow-rim);
+  border-radius: var(--radius-sm);
+  outline: 1px solid #00000020 !important;
+}
+
+/* .sidebar ul[role="tablist"]  */
+
+.sidebar ul[role="tablist"] .action-label:before {
+  left: auto !important;
+}
+
+.sidebar ul[role="tablist"] .active-item-indicator {
+  display: none !important;
+}
+
+/* BASEPANEL STYLING /////////////////////////////////////////*/
+.basepanel .action-item {
+  border-radius: var(--radius-sm);
+  height: 24px;
+}
+
+.basepanel .action-item.checked {
+  background-color: #ffffff12 !important;
+  box-shadow: var(--shadow-rim);
+  outline: 1px solid #00000020 !important;
+}
+
+.basepanel .active-item-indicator {
+  display: none !important;
+}
+
+/* INPUT & FORM ELEMENTS //////////////////////////////////////*/
+.monaco-select-box,
+.monaco-inputbox,
+.scm-editor {
+  border-radius: var(--radius);
+}
+
+.slider {
+  border-radius: 16px;
+}
+
+.monaco-button-dropdown {
+  border-radius: var(--radius);
+}
+
+.monaco-button {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-rim);
+}
+
+/* CONTEXT MENUS & POPUPS ////////////////////////////////////*/
+.context-view > .action-widget {
+  border-radius: var(--radius-lg);
+  border: 1px solid #ffffff09 !important;
+  backdrop-filter: var(--blur);
+}
+
+.context-view.monaco-menu-container {
+  border: var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.context-view {
+  border-radius: var(--radius-lg);
+}
+
+.monaco-select-box-dropdown-container {
+  border-radius: var(--radius-lg);
+  border: var(--border);
+}
+
+.monaco-menu {
+  background: var(--vscode-editor-background);
+}
+
+/* SUGGESTION WIDGETS ////////////////////////////////////////*/
+.suggest-widget {
+  border-radius: var(--radius);
+  backdrop-filter: var(--blur);
+  box-shadow: 0 0 10px #00000030;
+}
+
+.suggest-widget .monaco-row {
+  border-radius: 0px !important;
+}
+
+.suggest-details {
+  backdrop-filter: var(--blur);
+  border-radius: var(--radius-lg);
+}
+
+/* HOVER & HINTS ////////////////////////////////////////////*/
+.hover-widget,
+.monaco-hover {
+  backdrop-filter: var(--blur);
+  border-radius: var(--radius-lg);
+}
+
+.parameter-hints-widget {
+  box-shadow: var(--shadow-rim);
+  backdrop-filter: var(--blur);
+  border-radius: var(--radius-lg);
+}
+
+/* NOTIFICATION & STATUS /////////////////////////////////////*/
+.notification-toast {
+  backdrop-filter: var(--blur);
+  border: 1px solid #ffffff09 !important;
+  border-radius: var(--radius-lg);
+}
+
+footer.statusbar {
+  color: var(--vscode-titleBar-inactiveForeground) !important;
+}
+
+/* FIND & DEFINE WIDGETS ////////////////////////////////////*/
+.find-widget {
+  backdrop-filter: var(--blur);
+}
+
+.defineKeybindingWidget {
+  border-radius: var(--radius);
+  backdrop-filter: var(--blur);
+  border: var(--border);
+}
+
+/* TERMINAL & SPLIT VIEW ////////////////////////////////////*/
+.monaco-workbench .pane-body.integrated-terminal {
+  margin-top: var(--radius-lg);
+}
+
+.split-view-view {
+  border-right: 1px solid transparent !important;
+}
+
+.monaco-workbench:has(.split-view-view:nth-child(2):hover)
+  .monaco-sash.vertical:nth-child(2)::before {
+  background-color: #ffffff09 !important;
+  width: 1px;
+}
+
+/* UTILITY CLASSES //////////////////////////////////////////*/
+.monaco-icon-label {
+  display: flex;
+  align-items: center;
+}
+
+.title-label > h2 {
+  display: none;
+}
+
+.editor-actions {
+  display: none;
+}
+
+.nosidebar .inline-tabs-placeholder {
+  width: 75px;
+}

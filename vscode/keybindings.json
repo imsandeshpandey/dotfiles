@@ -1,0 +1,125 @@
+[
+  // EDITOR ACTIONS //////////////////////////////////////////////
+  {
+    "key": "shift-k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "neovim.mode != 'insert'"
+  },
+  {
+    "key": "shift-j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "neovim.mode != 'insert'"
+  },
+  {
+    "key": "space d",
+    "command": "-editor.action.removeDuplicateLines",
+    "when": "neovim.mode != 'insert'"
+  },
+  {
+    "key": "space b c",
+    "command": "breadcrumbs.toggle",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+
+  // SIDEBAR NAVIGATION /////////////////////////////////////////
+  {
+    "key": "ctrl-n",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl-n",
+    "command": "workbench.action.focusSideBar",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space s e",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space s x",
+    "command": "workbench.extensions.action.focusExtensionsView",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space s f",
+    "command": "workbench.view.search.focus",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space s g",
+    "command": "workbench.scm.focus",
+    "when": "editorTextFocus && neovim.mode == 'normal' && workbench.scm.active"
+  },
+
+  // FILE MANAGEMENT ///////////////////////////////////////////
+  {
+    "key": "space f",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "shift-tab",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space x",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "space o f",
+    "command": "workbench.action.showEditorsInActiveGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+
+  // QUICK OPEN & MENU NAVIGATION //////////////////////////////
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPreviousCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "codeActionMenuVisible"
+  },
+
+  // WINDOW & UI CONTROLS /////////////////////////////////////
+  {
+    "key": "ctrl+w ctrl+w",
+    "command": "workbench.action.focusNextPart",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "space s b",
+    "command": "workbench.action.toggleStatusbarVisibility",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space s t",
+    "command": "workbench.action.hideEditorTabs",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  }
+]
